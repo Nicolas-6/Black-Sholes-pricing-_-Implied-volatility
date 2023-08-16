@@ -106,5 +106,5 @@ def main() :
     print("We can visualize how moneyness of our option and IV are related")
     
 
-if __init__=="name":
+if __init__=="__name__":
     main()

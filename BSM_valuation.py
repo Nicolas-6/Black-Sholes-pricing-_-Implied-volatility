@@ -50,6 +50,9 @@ def BSM_option_valution( So, K, r, sigma, T, option=1):
     if option==1:
         
         #we are valuing call
+        print(f"N(d1) is {N(d1)}")
+        print(f"N(d2) is {N(d2)}")
+        print(f"Delta = {N(d1)*math.exp(-r*T)}")
         c = N(d1)*So - math.exp(-r*T)*N(d2)*K
         return c
         
@@ -57,7 +60,7 @@ def BSM_option_valution( So, K, r, sigma, T, option=1):
         #we are valuing put
         p =-( N(-d1)*So - math.exp(-r*T)*N(-d2)*K)
         return p
-
+BSM_option_valution( 100, 100, 0.05, 0.07, 0.0001, option=1)
 
 def main() :
     #visualize option delta
@@ -103,5 +106,5 @@ def main() :
     print("We can visualize how moneyness of our option and IV are related")
     
 
-if "__init___"=="name":
+if __init__=="name":
     main()
